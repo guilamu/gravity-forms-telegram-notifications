@@ -1,0 +1,15 @@
+# Test runner artifacts
+tests/.stub.log
+
+# Note: languages/*.mo IS committed on purpose. The release workflow only zips the
+# repository, it does not compile translations, so an ignored .mo would never reach users.
+
+# Local tooling
+.idea/
+.vscode/
+node_modules/
+vendor/
+
+# OS noise
+.DS_Store
+Thumbs.db

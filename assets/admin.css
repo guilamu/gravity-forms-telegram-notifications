@@ -1,0 +1,34 @@
+/* Settings page tools for chat discovery and test messages. */
+
+.gf-telegram-tools__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0 0 8px;
+}
+
+.gf-telegram-tools__hint {
+	margin: 0 0 12px;
+	max-width: 60em;
+}
+
+.gf-telegram-tools__result {
+	margin: 0 0 12px;
+}
+
+.gf-telegram-tools__result:empty {
+	display: none;
+}
+
+.gf-telegram-chats {
+	max-width: 40em;
+}
+
+.gf-telegram-chats th,
+.gf-telegram-chats td {
+	padding: 6px 10px;
+}
+
+.gf-telegram-chats code {
+	user-select: all;
+}

@@ -1,0 +1,465 @@
+# Copyright (C) 2026 the Gravity Forms Telegram Notifications contributors
+# This file is distributed under the AGPL-3.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms Telegram Notifications 1.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-07-26T19:30:47+00:00\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: gravity-forms-telegram-notifications\n"
+
+#. translators: 1: The chat ID. 2: The error message returned by Telegram.
+#: class-gf-telegram.php:1698
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#. translators: 1: The file name. 2: The size limit in MB.
+#: class-gf-telegram.php:1416
+msgid "%1$s is larger than the %2$d MB Telegram allows"
+msgstr ""
+
+#: class-gf-telegram.php:561
+msgid "%d chat is now known to this site."
+msgid_plural "%d chats are now known to this site."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: The site name.
+#: class-gf-telegram.php:653
+msgid "%s is connected. Gravity Forms can now send notifications to this chat."
+msgstr ""
+
+#. translators: %s: The minimum required Gravity Forms version.
+#: includes/class-github-updater.php:645
+msgid "%s or higher"
+msgstr ""
+
+#: class-gf-telegram.php:503
+msgid "(no name)"
+msgstr ""
+
+#: class-gf-telegram.php:344
+msgid "A chat ID looks like 123456789 for a private chat or -1001234567890 for a group or channel. The bot must have been started by the user, or added to the group or channel, before it can post there. An @username works for a public channel or group only: a person is always reached by their numeric ID, never by their @username."
+msgstr ""
+
+#: class-gf-telegram.php:366
+msgid "API Base URL"
+msgstr ""
+
+#: class-gf-telegram.php:648
+msgid "Add at least one default recipient, and save, before sending a test."
+msgstr ""
+
+#: class-gf-telegram.php:361
+msgid "Advanced"
+msgstr ""
+
+#: class-gf-telegram.php:629
+msgid "An @username only reaches a public channel or group. To reach a person, use their numeric chat ID: ask them to message the bot, then use Find my chats."
+msgstr ""
+
+#: class-gf-telegram.php:329
+msgid "Anyone holding this token controls the bot. It can also be defined in wp-config.php as GF_TELEGRAM_BOT_TOKEN to keep it out of the database."
+msgstr ""
+
+#: class-gf-telegram.php:904
+msgid "Attachments"
+msgstr ""
+
+#: class-gf-telegram.php:320
+#: class-gf-telegram.php:328
+msgid "Bot Token"
+msgstr ""
+
+#: class-gf-telegram.php:796
+#: class-gf-telegram.php:803
+msgid "Buttons"
+msgstr ""
+
+#: class-gf-telegram.php:804
+msgid "Buttons appear under the message. Put the label and the link on one line separated by a vertical bar; merge tags work in both halves. Links must be absolute and start with http, https or tg. A line without a valid link is skipped and noted in the log rather than sent, because Telegram rejects the whole message over one bad button."
+msgstr ""
+
+#: class-gf-telegram.php:494
+msgid "Chat"
+msgstr ""
+
+#: class-gf-telegram.php:496
+msgid "Chat ID"
+msgstr ""
+
+#: class-gf-telegram.php:350
+msgid "Chats"
+msgstr ""
+
+#: class-gf-telegram.php:855
+#: class-gf-telegram.php:861
+msgid "Conditional Logic"
+msgstr ""
+
+#. translators: %s: The bot username, linked to the bot, in bold.
+#: class-gf-telegram.php:420
+msgid "Connected as %s."
+msgstr ""
+
+#. translators: %s: A list of chat IDs and why each failed.
+#: class-gf-telegram.php:684
+msgid "Could not send to: %s"
+msgstr ""
+
+#: class-gf-telegram.php:336
+#: class-gf-telegram.php:343
+msgid "Default Recipients"
+msgstr ""
+
+#: class-gf-telegram.php:961
+#: class-gf-telegram.php:1040
+msgid "Default recipients"
+msgstr ""
+
+#: class-gf-telegram.php:960
+msgid "Default recipients (none configured yet)"
+msgstr ""
+
+#. translators: %s: The default API base URL, wrapped in a code tag.
+#: class-gf-telegram.php:373
+msgid "Defaults to %s. Change this only when using a self-hosted Bot API server or a proxy that forwards to Telegram."
+msgstr ""
+
+#: class-gf-telegram.php:810
+msgid "Delivery Options"
+msgstr ""
+
+#: class-gf-telegram.php:857
+msgid "Enable"
+msgstr ""
+
+#: class-gf-telegram.php:998
+msgid "Enter a chat ID"
+msgstr ""
+
+#: class-gf-telegram.php:750
+msgid "Enter a feed name to uniquely identify this setup."
+msgstr ""
+
+#: class-gf-telegram.php:721
+msgid "Enter a full URL including the scheme, for example https://api.telegram.org."
+msgstr ""
+
+#. translators: 1: The document size limit in MB. 2: The photo size limit in MB.
+#: class-gf-telegram.php:917
+msgid "Files uploaded to the chosen fields are attached to the notification. Telegram accepts up to %1$d MB per file, or %2$d MB when sending as a photo; anything larger is skipped and reported on the entry."
+msgstr ""
+
+#: class-gf-telegram.php:251
+#: class-gf-telegram.php:451
+msgid "Find my chats"
+msgstr ""
+
+#: class-gf-telegram.php:784
+#: class-gf-telegram.php:790
+msgid "Formatting"
+msgstr ""
+
+#: gravity-forms-telegram-notifications.php:150
+#: gravity-forms-telegram-notifications.php:157
+msgid "Gravity Forms Telegram Notifications"
+msgstr ""
+
+#. Author of the plugin
+msgid "Guilamu"
+msgstr ""
+
+#: includes/class-gf-telegram-formatter.php:79
+msgid "HTML"
+msgstr ""
+
+#: class-gf-telegram.php:819
+#: class-gf-telegram.php:822
+msgid "Hide link previews"
+msgstr ""
+
+#: class-gf-telegram.php:791
+msgid "How Telegram should read the message you wrote above. With HTML you can use tags such as <b> and <a href=\"\">; with MarkdownV2 you can use *bold* and _italic_. Submitted values are always escaped, so a form field containing formatting characters is shown as typed rather than breaking the message."
+msgstr ""
+
+#: class-gf-telegram.php:925
+msgid "Images"
+msgstr ""
+
+#. translators: %s: A comma separated list of chat IDs which did receive the message.
+#: class-gf-telegram.php:1724
+msgid "It was delivered to: %s."
+msgstr ""
+
+#: class-gf-telegram.php:362
+msgid "Leave these settings alone unless Telegram is unreachable from your server."
+msgstr ""
+
+#: includes/class-gf-telegram-formatter.php:83
+msgid "MarkdownV2"
+msgstr ""
+
+#: class-gf-telegram.php:767
+#: class-gf-telegram.php:773
+msgid "Message"
+msgstr ""
+
+#: gravity-forms-telegram-notifications.php:149
+msgid "More information about Gravity Forms Telegram Notifications"
+msgstr ""
+
+#: class-gf-telegram.php:743
+#: class-gf-telegram.php:749
+#: class-gf-telegram.php:1017
+msgid "Name"
+msgstr ""
+
+#: includes/class-gf-telegram-api.php:172
+#: includes/class-gf-telegram-api.php:199
+#: includes/class-gf-telegram-api.php:225
+msgid "No Telegram chat ID was provided."
+msgstr ""
+
+#: class-gf-telegram.php:255
+#: class-gf-telegram.php:558
+msgid "No chats found yet. Message your bot, or add it to a group, then try again."
+msgstr ""
+
+#: includes/class-gf-telegram-formatter.php:87
+msgid "None (plain text)"
+msgstr ""
+
+#: class-gf-telegram.php:340
+msgid "One chat ID or public @username per line. Feeds that do not name their own recipient are sent here."
+msgstr ""
+
+#. translators: 1: Opening anchor tag for BotFather. 2: Closing anchor tag. 3: The /newbot command, wrapped in a code tag.
+#: class-gf-telegram.php:394
+msgid "Open %1$s@BotFather%2$s in Telegram, send %3$s and follow the prompts, then paste the token it gives you below."
+msgstr ""
+
+#: class-gf-telegram.php:800
+msgid "Optional. One button per line, written as Label | https://example.com"
+msgstr ""
+
+#: class-gf-telegram.php:851
+msgid "Optional. Posts into a specific topic of a forum group."
+msgstr ""
+
+#: class-gf-telegram.php:814
+msgid "Options"
+msgstr ""
+
+#: class-gf-telegram.php:837
+#: class-gf-telegram.php:840
+msgid "Prevent forwarding and saving"
+msgstr ""
+
+#: class-gf-telegram.php:841
+msgid "Recipients cannot forward or save the message. Useful when submissions contain personal data."
+msgstr ""
+
+#: includes/class-github-updater.php:642
+msgid "Requires Gravity Forms:"
+msgstr ""
+
+#: class-gf-telegram.php:539
+#: class-gf-telegram.php:642
+msgid "Save a valid bot token first."
+msgstr ""
+
+#: class-gf-telegram.php:458
+msgid "Save your token first. Telegram only tells a bot about chats it has already heard from, so message the bot or add it to your group before searching."
+msgstr ""
+
+#: class-gf-telegram.php:909
+#: class-gf-telegram.php:914
+msgid "Send Files From"
+msgstr ""
+
+#: class-gf-telegram.php:755
+#: class-gf-telegram.php:761
+#: class-gf-telegram.php:1018
+msgid "Send To"
+msgstr ""
+
+#: class-gf-telegram.php:252
+#: class-gf-telegram.php:454
+msgid "Send a test message"
+msgstr ""
+
+#: class-gf-telegram.php:828
+#: class-gf-telegram.php:831
+msgid "Send silently"
+msgstr ""
+
+#: class-gf-telegram.php:190
+msgid "Send the Telegram notification only when a payment is received."
+msgstr ""
+
+#: class-gf-telegram.php:858
+msgid "Send the notification if"
+msgstr ""
+
+#: class-gf-telegram.php:934
+msgid "Sends JPEG, PNG, GIF and WebP uploads as photos, so they preview in the chat. Telegram recompresses photos, so the original file is not preserved; leave this off when the exact file matters."
+msgstr ""
+
+#. Description of the plugin
+msgid "Sends a Telegram message to a chat, group, channel or forum topic when a Gravity Form is submitted."
+msgstr ""
+
+#: class-gf-telegram.php:933
+msgid "Show images inline"
+msgstr ""
+
+#: class-gf-telegram.php:930
+msgid "Show images inline instead of as files"
+msgstr ""
+
+#: class-gf-telegram.php:823
+msgid "Stops Telegram expanding the first link in the message into a preview card."
+msgstr ""
+
+#: class-gf-telegram.php:356
+msgid "Telegram Bot Connection"
+msgstr ""
+
+#: class-gf-telegram.php:739
+msgid "Telegram Feed Settings"
+msgstr ""
+
+#. translators: %s: A comma separated list of chat IDs and the resulting message IDs.
+#: class-gf-telegram.php:1738
+msgid "Telegram notification sent to: %s."
+msgstr ""
+
+#. translators: %s: A list of chat IDs.
+#: class-gf-telegram.php:695
+msgid "Test message sent to: %s"
+msgstr ""
+
+#. translators: %d: The HTTP response code.
+#: includes/class-gf-telegram-api.php:338
+msgid "The API returned an unexpected response (HTTP %d)."
+msgstr ""
+
+#: class-gf-telegram.php:762
+msgid "The chat, group or channel this feed posts to. Choose Custom to enter a chat ID directly, which accepts merge tags so the recipient can come from the submission itself."
+msgstr ""
+
+#. translators: %s: The file name.
+#: includes/class-gf-telegram-api.php:404
+#: includes/class-gf-telegram-api.php:418
+msgid "The file %s could not be read."
+msgstr ""
+
+#: class-gf-telegram.php:832
+msgid "The message arrives without a notification sound."
+msgstr ""
+
+#: includes/class-gf-telegram-api.php:291
+msgid "The message could not be encoded for sending."
+msgstr ""
+
+#: includes/class-gf-telegram-api.php:176
+msgid "The message is empty."
+msgstr ""
+
+#. translators: 1: The {all_fields} merge tag. 2: The message length limit.
+#: class-gf-telegram.php:776
+msgid "The message to send. Insert submitted values with merge tags; %1$s expands to the whole submission. Messages longer than %2$d characters are split into several."
+msgstr ""
+
+#: class-gf-telegram.php:253
+msgid "The request failed. Check the Gravity Forms log for details."
+msgstr ""
+
+#: class-gf-telegram.php:254
+msgid "The request was rejected before it reached the add-on. Reload the page and try again."
+msgstr ""
+
+#: class-gf-telegram.php:325
+msgid "The token @BotFather gave you, in the form 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ."
+msgstr ""
+
+#. translators: %s: The GF_TELEGRAM_BOT_TOKEN constant name, wrapped in a code tag.
+#: class-gf-telegram.php:403
+msgid "The token is currently being read from the %s constant, so it cannot be edited here."
+msgstr ""
+
+#. translators: %s: The URL currently registered as the bot's webhook.
+#: class-gf-telegram.php:595
+msgid "The webhook currently points at %s."
+msgstr ""
+
+#: class-gf-telegram.php:588
+msgid "This bot has a webhook registered, so Telegram will not hand over its recent messages. Another plugin on this site is most likely using the same bot. Either give this site its own bot, or enter the chat ID by hand."
+msgstr ""
+
+#: class-gf-telegram.php:848
+msgid "Topic ID"
+msgstr ""
+
+#: class-gf-telegram.php:495
+msgid "Type"
+msgstr ""
+
+#: includes/class-github-updater.php:883
+msgid "Unable to rename the update folder. Please retry or update manually."
+msgstr ""
+
+#. translators: %s: A comma separated list of chat IDs and the reason each failed.
+#: class-gf-telegram.php:1717
+msgid "Unable to send the Telegram notification to: %s."
+msgstr ""
+
+#: class-gf-telegram.php:1588
+msgid "Unable to send the notification: no recipient is configured."
+msgstr ""
+
+#: class-gf-telegram.php:1580
+msgid "Unable to send the notification: the bot token is missing or invalid."
+msgstr ""
+
+#: class-gf-telegram.php:1596
+msgid "Unable to send the notification: the message is empty once merge tags are replaced."
+msgstr ""
+
+#: class-gf-telegram.php:1635
+msgid "Unable to send the notification: the message is empty."
+msgstr ""
+
+#: class-gf-telegram.php:905
+msgid "Uploaded files are sent as separate messages, after the notification itself."
+msgstr ""
+
+#: gravity-forms-telegram-notifications.php:151
+msgid "View details"
+msgstr ""
+
+#: class-gf-telegram.php:862
+msgid "When conditional logic is enabled, the notification is only sent when the condition is met. When disabled, every submission sends one."
+msgstr ""
+
+#: class-gf-telegram.php:250
+msgid "Working…"
+msgstr ""
+
+#: class-gf-telegram.php:525
+msgid "You are not allowed to do that."
+msgstr ""
+
+#: gravity-forms-telegram-notifications.php:158
+msgid "🐛 Report a Bug"
+msgstr ""
+
+#: gravity-forms-telegram-notifications.php:163
+msgid "🐛 Report a Bug (install Bug Reporter)"
+msgstr ""

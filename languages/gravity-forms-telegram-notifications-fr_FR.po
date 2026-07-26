@@ -1,0 +1,450 @@
+# French translation for Gravity Forms Telegram Notifications.
+# This file is distributed under the AGPL-3.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms Telegram Notifications 1.0.0\n"
+"POT-Creation-Date: 2026-07-26T08:08:42+00:00\n"
+"PO-Revision-Date: 2026-07-26 21:32+0200\n"
+"Last-Translator: Guilamu <https://github.com/guilamu>\n"
+"Language-Team: Français <fr_FR@li.org>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: gravity-forms-telegram-notifications\n"
+"X-Generator: Poedit 3.8\n"
+
+#. translators: 1: The chat ID. 2: The error message returned by Telegram.
+#: class-gf-telegram.php:1698
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#. translators: 1: The file name. 2: The size limit in MB.
+#: class-gf-telegram.php:1416
+msgid "%1$s is larger than the %2$d MB Telegram allows"
+msgstr "%1$s dépasse la limite de %2$d Mo autorisée par Telegram"
+
+#: class-gf-telegram.php:561
+msgid "%d chat is now known to this site."
+msgid_plural "%d chats are now known to this site."
+msgstr[0] "%d discussion est désormais connue de ce site."
+msgstr[1] "%d discussions sont désormais connues de ce site."
+
+#. translators: %s: The site name.
+#: class-gf-telegram.php:653
+msgid "%s is connected. Gravity Forms can now send notifications to this chat."
+msgstr "%s est connecté. Gravity Forms peut désormais envoyer des notifications dans cette discussion."
+
+#. translators: %s: The minimum required Gravity Forms version.
+#: includes/class-github-updater.php:645
+msgid "%s or higher"
+msgstr "%s ou supérieure"
+
+#: class-gf-telegram.php:503
+msgid "(no name)"
+msgstr "(sans nom)"
+
+#: class-gf-telegram.php:344
+msgid "A chat ID looks like 123456789 for a private chat or -1001234567890 for a group or channel. The bot must have been started by the user, or added to the group or channel, before it can post there. An @username works for a public channel or group only: a person is always reached by their numeric ID, never by their @username."
+msgstr "Un ID de discussion ressemble à 123456789 pour une discussion privée, ou à -1001234567890 pour un groupe ou un canal. Le bot doit avoir été démarré par l’utilisateur, ou ajouté au groupe ou au canal, avant de pouvoir y publier. Un @nomdutilisateur ne fonctionne que pour un canal ou un groupe public : une personne se joint toujours par son ID numérique, jamais par son @nomdutilisateur."
+
+#: class-gf-telegram.php:629
+msgid "An @username only reaches a public channel or group. To reach a person, use their numeric chat ID: ask them to message the bot, then use Find my chats."
+msgstr "Un @nomdutilisateur ne permet de joindre qu’un canal ou un groupe public. Pour joindre une personne, utilisez son ID de discussion numérique : demandez-lui d’écrire au bot, puis utilisez « Trouver mes discussions »."
+
+#: class-gf-telegram.php:366
+msgid "API Base URL"
+msgstr "URL de base de l’API"
+
+#: class-gf-telegram.php:648
+msgid "Add at least one default recipient, and save, before sending a test."
+msgstr "Ajoutez au moins un destinataire par défaut, puis enregistrez, avant d’envoyer un test."
+
+#: class-gf-telegram.php:361
+msgid "Advanced"
+msgstr "Avancé"
+
+#: class-gf-telegram.php:329
+msgid "Anyone holding this token controls the bot. It can also be defined in wp-config.php as GF_TELEGRAM_BOT_TOKEN to keep it out of the database."
+msgstr "Toute personne détenant ce jeton contrôle le bot. Il peut aussi être défini dans wp-config.php sous le nom GF_TELEGRAM_BOT_TOKEN afin de le garder hors de la base de données."
+
+#: class-gf-telegram.php:904
+msgid "Attachments"
+msgstr "Pièces jointes"
+
+#: class-gf-telegram.php:320 class-gf-telegram.php:328
+msgid "Bot Token"
+msgstr "Jeton du bot"
+
+#: class-gf-telegram.php:796 class-gf-telegram.php:803
+msgid "Buttons"
+msgstr "Boutons"
+
+#: class-gf-telegram.php:804
+msgid "Buttons appear under the message. Put the label and the link on one line separated by a vertical bar; merge tags work in both halves. Links must be absolute and start with http, https or tg. A line without a valid link is skipped and noted in the log rather than sent, because Telegram rejects the whole message over one bad button."
+msgstr "Les boutons apparaissent sous le message. Placez le libellé et le lien sur une même ligne, séparés par une barre verticale ; les balises de fusion fonctionnent dans les deux parties. Les liens doivent être absolus et commencer par http, https ou tg. Une ligne sans lien valide est ignorée et consignée dans le journal plutôt qu’envoyée, car Telegram rejette le message entier à cause d’un seul bouton incorrect."
+
+#: class-gf-telegram.php:494
+msgid "Chat"
+msgstr "Discussion"
+
+#: class-gf-telegram.php:496
+msgid "Chat ID"
+msgstr "ID de discussion"
+
+#: class-gf-telegram.php:350
+msgid "Chats"
+msgstr "Discussions"
+
+#: class-gf-telegram.php:855 class-gf-telegram.php:861
+msgid "Conditional Logic"
+msgstr "Logique conditionnelle"
+
+#. translators: %s: The bot username, linked to the bot, in bold.
+#: class-gf-telegram.php:420
+msgid "Connected as %s."
+msgstr "Connecté en tant que %s."
+
+#. translators: %s: A list of chat IDs and why each failed.
+#: class-gf-telegram.php:684
+msgid "Could not send to: %s"
+msgstr "Envoi impossible vers : %s"
+
+#: class-gf-telegram.php:336 class-gf-telegram.php:343
+msgid "Default Recipients"
+msgstr "Destinataires par défaut"
+
+#: class-gf-telegram.php:961 class-gf-telegram.php:1040
+msgid "Default recipients"
+msgstr "Destinataires par défaut"
+
+#: class-gf-telegram.php:960
+msgid "Default recipients (none configured yet)"
+msgstr "Destinataires par défaut (aucun configuré pour l’instant)"
+
+#. translators: %s: The default API base URL, wrapped in a code tag.
+#: class-gf-telegram.php:373
+msgid "Defaults to %s. Change this only when using a self-hosted Bot API server or a proxy that forwards to Telegram."
+msgstr "Par défaut : %s. Ne modifiez ce réglage que si vous utilisez un serveur Bot API auto-hébergé ou un proxy qui relaie vers Telegram."
+
+#: class-gf-telegram.php:810
+msgid "Delivery Options"
+msgstr "Options d’envoi"
+
+#: class-gf-telegram.php:857
+msgid "Enable"
+msgstr "Activer"
+
+#: class-gf-telegram.php:998
+msgid "Enter a chat ID"
+msgstr "Saisir un ID de discussion"
+
+#: class-gf-telegram.php:750
+msgid "Enter a feed name to uniquely identify this setup."
+msgstr "Saisissez un nom de flux pour identifier cette configuration de manière unique."
+
+#: class-gf-telegram.php:721
+msgid "Enter a full URL including the scheme, for example https://api.telegram.org."
+msgstr "Saisissez une URL complète avec le protocole, par exemple https://api.telegram.org."
+
+#. translators: 1: The document size limit in MB. 2: The photo size limit in MB.
+#: class-gf-telegram.php:917
+msgid "Files uploaded to the chosen fields are attached to the notification. Telegram accepts up to %1$d MB per file, or %2$d MB when sending as a photo; anything larger is skipped and reported on the entry."
+msgstr "Les fichiers envoyés dans les champs sélectionnés sont joints à la notification. Telegram accepte jusqu’à %1$d Mo par fichier, ou %2$d Mo lors d’un envoi en tant que photo ; tout fichier plus volumineux est ignoré et signalé sur l’entrée."
+
+#: class-gf-telegram.php:251 class-gf-telegram.php:451
+msgid "Find my chats"
+msgstr "Trouver mes discussions"
+
+#: class-gf-telegram.php:784 class-gf-telegram.php:790
+msgid "Formatting"
+msgstr "Mise en forme"
+
+#: gravity-forms-telegram-notifications.php:150
+#: gravity-forms-telegram-notifications.php:157
+msgid "Gravity Forms Telegram Notifications"
+msgstr "Gravity Forms Telegram Notifications"
+
+#. Author of the plugin
+msgid "Guilamu"
+msgstr "Guilamu"
+
+#: includes/class-gf-telegram-formatter.php:79
+msgid "HTML"
+msgstr "HTML"
+
+#: class-gf-telegram.php:819 class-gf-telegram.php:822
+msgid "Hide link previews"
+msgstr "Masquer les aperçus de liens"
+
+#: class-gf-telegram.php:791
+msgid "How Telegram should read the message you wrote above. With HTML you can use tags such as <b> and <a href=\"\">; with MarkdownV2 you can use *bold* and _italic_. Submitted values are always escaped, so a form field containing formatting characters is shown as typed rather than breaking the message."
+msgstr "La façon dont Telegram doit interpréter le message saisi ci-dessus. Avec HTML, vous pouvez utiliser des balises telles que <b> et <a href=\"\"> ; avec MarkdownV2, vous pouvez utiliser *gras* et _italique_. Les valeurs soumises sont toujours échappées : un champ de formulaire contenant des caractères de mise en forme s’affiche tel quel au lieu de casser le message."
+
+#: class-gf-telegram.php:925
+msgid "Images"
+msgstr "Images"
+
+#. translators: %s: A comma separated list of chat IDs which did receive the message.
+#: class-gf-telegram.php:1724
+msgid "It was delivered to: %s."
+msgstr "Il a bien été remis à : %s."
+
+#: class-gf-telegram.php:362
+msgid "Leave these settings alone unless Telegram is unreachable from your server."
+msgstr "Ne modifiez ces réglages que si Telegram est inaccessible depuis votre serveur."
+
+#: includes/class-gf-telegram-formatter.php:83
+msgid "MarkdownV2"
+msgstr "MarkdownV2"
+
+#: class-gf-telegram.php:767 class-gf-telegram.php:773
+msgid "Message"
+msgstr "Message"
+
+#: gravity-forms-telegram-notifications.php:149
+msgid "More information about Gravity Forms Telegram Notifications"
+msgstr "Plus d’informations sur Gravity Forms Telegram Notifications"
+
+#: class-gf-telegram.php:743 class-gf-telegram.php:749
+#: class-gf-telegram.php:1017
+msgid "Name"
+msgstr "Nom"
+
+#: includes/class-gf-telegram-api.php:172
+#: includes/class-gf-telegram-api.php:199
+#: includes/class-gf-telegram-api.php:225
+msgid "No Telegram chat ID was provided."
+msgstr "Aucun ID de discussion Telegram n’a été fourni."
+
+#: class-gf-telegram.php:255 class-gf-telegram.php:558
+msgid "No chats found yet. Message your bot, or add it to a group, then try again."
+msgstr "Aucune discussion trouvée pour l’instant. Écrivez à votre bot, ou ajoutez-le à un groupe, puis réessayez."
+
+#: includes/class-gf-telegram-formatter.php:87
+msgid "None (plain text)"
+msgstr "Aucune (texte brut)"
+
+#: class-gf-telegram.php:340
+msgid "One chat ID or public @username per line. Feeds that do not name their own recipient are sent here."
+msgstr "Un ID de discussion ou un @identifiant public par ligne. Les flux qui n’indiquent pas leur propre destinataire écrivent ici."
+
+#. translators: 1: Opening anchor tag for BotFather. 2: Closing anchor tag. 3: The /newbot command, wrapped in a code tag.
+#: class-gf-telegram.php:394
+msgid "Open %1$s@BotFather%2$s in Telegram, send %3$s and follow the prompts, then paste the token it gives you below."
+msgstr "Ouvrez %1$s@BotFather%2$s dans Telegram, envoyez %3$s et suivez les instructions, puis collez ci-dessous le jeton qu’il vous communique."
+
+#: class-gf-telegram.php:800
+msgid "Optional. One button per line, written as Label | https://example.com"
+msgstr "Facultatif. Un bouton par ligne, sous la forme Libellé | https://exemple.com"
+
+#: class-gf-telegram.php:851
+msgid "Optional. Posts into a specific topic of a forum group."
+msgstr "Facultatif. Publie dans un sujet précis d’un groupe forum."
+
+#: class-gf-telegram.php:814
+msgid "Options"
+msgstr "Options"
+
+#: class-gf-telegram.php:837 class-gf-telegram.php:840
+msgid "Prevent forwarding and saving"
+msgstr "Empêcher le transfert et l’enregistrement"
+
+#: class-gf-telegram.php:841
+msgid "Recipients cannot forward or save the message. Useful when submissions contain personal data."
+msgstr "Les destinataires ne peuvent ni transférer ni enregistrer le message. Utile lorsque les soumissions contiennent des données personnelles."
+
+#: includes/class-github-updater.php:642
+msgid "Requires Gravity Forms:"
+msgstr "Nécessite Gravity Forms :"
+
+#: class-gf-telegram.php:539 class-gf-telegram.php:642
+msgid "Save a valid bot token first."
+msgstr "Enregistrez d’abord un jeton de bot valide."
+
+#: class-gf-telegram.php:458
+msgid "Save your token first. Telegram only tells a bot about chats it has already heard from, so message the bot or add it to your group before searching."
+msgstr "Enregistrez d’abord votre jeton. Telegram n’informe un bot que des discussions dont il a déjà reçu un message : écrivez au bot ou ajoutez-le à votre groupe avant de lancer la recherche."
+
+#: class-gf-telegram.php:909 class-gf-telegram.php:914
+msgid "Send Files From"
+msgstr "Envoyer les fichiers depuis"
+
+#: class-gf-telegram.php:755 class-gf-telegram.php:761
+#: class-gf-telegram.php:1018
+msgid "Send To"
+msgstr "Envoyer à"
+
+#: class-gf-telegram.php:252 class-gf-telegram.php:454
+msgid "Send a test message"
+msgstr "Envoyer un message de test"
+
+#: class-gf-telegram.php:828 class-gf-telegram.php:831
+msgid "Send silently"
+msgstr "Envoyer en silence"
+
+#: class-gf-telegram.php:190
+msgid "Send the Telegram notification only when a payment is received."
+msgstr "N’envoyer la notification Telegram que lorsqu’un paiement est reçu."
+
+#: class-gf-telegram.php:858
+msgid "Send the notification if"
+msgstr "Envoyer la notification si"
+
+#: class-gf-telegram.php:934
+msgid "Sends JPEG, PNG, GIF and WebP uploads as photos, so they preview in the chat. Telegram recompresses photos, so the original file is not preserved; leave this off when the exact file matters."
+msgstr "Envoie les fichiers JPEG, PNG, GIF et WebP en tant que photos, afin qu’ils s’affichent directement dans la discussion. Telegram recompresse les photos : le fichier d’origine n’est pas conservé ; laissez cette option désactivée si le fichier exact importe."
+
+#. Description of the plugin
+msgid "Sends a Telegram message to a chat, group, channel or forum topic when a Gravity Form is submitted."
+msgstr "Envoie un message Telegram dans une discussion, un groupe, un canal ou un sujet de forum lors de la soumission d’un formulaire Gravity Forms."
+
+#: class-gf-telegram.php:933
+msgid "Show images inline"
+msgstr "Afficher les images en aperçu"
+
+#: class-gf-telegram.php:930
+msgid "Show images inline instead of as files"
+msgstr "Afficher les images en aperçu plutôt que sous forme de fichiers"
+
+#: class-gf-telegram.php:823
+msgid "Stops Telegram expanding the first link in the message into a preview card."
+msgstr "Empêche Telegram de transformer le premier lien du message en carte d’aperçu."
+
+#: class-gf-telegram.php:356
+msgid "Telegram Bot Connection"
+msgstr "Connexion au bot Telegram"
+
+#: class-gf-telegram.php:739
+msgid "Telegram Feed Settings"
+msgstr "Réglages du flux Telegram"
+
+#. translators: %s: A comma separated list of chat IDs and the resulting message IDs.
+#: class-gf-telegram.php:1738
+msgid "Telegram notification sent to: %s."
+msgstr "Notification Telegram envoyée à : %s."
+
+#. translators: %s: A list of chat IDs.
+#: class-gf-telegram.php:695
+msgid "Test message sent to: %s"
+msgstr "Message de test envoyé à : %s"
+
+#. translators: %d: The HTTP response code.
+#: includes/class-gf-telegram-api.php:338
+msgid "The API returned an unexpected response (HTTP %d)."
+msgstr "L’API a renvoyé une réponse inattendue (HTTP %d)."
+
+#: class-gf-telegram.php:762
+msgid "The chat, group or channel this feed posts to. Choose Custom to enter a chat ID directly, which accepts merge tags so the recipient can come from the submission itself."
+msgstr "La discussion, le groupe ou le canal dans lequel ce flux publie. Choisissez Personnalisé pour saisir directement un ID de discussion ; ce champ accepte les balises de fusion, le destinataire peut donc provenir de la soumission elle-même."
+
+#. translators: %s: The file name.
+#: includes/class-gf-telegram-api.php:404
+#: includes/class-gf-telegram-api.php:418
+msgid "The file %s could not be read."
+msgstr "Le fichier %s n’a pas pu être lu."
+
+#: class-gf-telegram.php:832
+msgid "The message arrives without a notification sound."
+msgstr "Le message arrive sans son de notification."
+
+#: includes/class-gf-telegram-api.php:291
+msgid "The message could not be encoded for sending."
+msgstr "Le message n’a pas pu être encodé pour l’envoi."
+
+#: includes/class-gf-telegram-api.php:176
+msgid "The message is empty."
+msgstr "Le message est vide."
+
+#. translators: 1: The {all_fields} merge tag. 2: The message length limit.
+#: class-gf-telegram.php:776
+msgid "The message to send. Insert submitted values with merge tags; %1$s expands to the whole submission. Messages longer than %2$d characters are split into several."
+msgstr "Le message à envoyer. Insérez les valeurs soumises à l’aide des balises de fusion ; %1$s reprend l’intégralité de la soumission. Les messages de plus de %2$d caractères sont scindés en plusieurs."
+
+#: class-gf-telegram.php:253
+msgid "The request failed. Check the Gravity Forms log for details."
+msgstr "La requête a échoué. Consultez le journal de Gravity Forms pour en savoir plus."
+
+#: class-gf-telegram.php:254
+msgid "The request was rejected before it reached the add-on. Reload the page and try again."
+msgstr "La requête a été rejetée avant d’atteindre l’extension. Rechargez la page et réessayez."
+
+#: class-gf-telegram.php:325
+msgid "The token @BotFather gave you, in the form 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ."
+msgstr "Le jeton fourni par @BotFather, de la forme 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ."
+
+#. translators: %s: The GF_TELEGRAM_BOT_TOKEN constant name, wrapped in a code tag.
+#: class-gf-telegram.php:403
+msgid "The token is currently being read from the %s constant, so it cannot be edited here."
+msgstr "Le jeton est actuellement lu depuis la constante %s : il ne peut donc pas être modifié ici."
+
+#. translators: %s: The URL currently registered as the bot's webhook.
+#: class-gf-telegram.php:595
+msgid "The webhook currently points at %s."
+msgstr "Le webhook pointe actuellement vers %s."
+
+#: class-gf-telegram.php:588
+msgid "This bot has a webhook registered, so Telegram will not hand over its recent messages. Another plugin on this site is most likely using the same bot. Either give this site its own bot, or enter the chat ID by hand."
+msgstr "Un webhook est enregistré pour ce bot : Telegram ne transmettra donc pas ses messages récents. Une autre extension de ce site utilise très probablement le même bot. Attribuez un bot dédié à ce site, ou saisissez l’ID de discussion à la main."
+
+#: class-gf-telegram.php:848
+msgid "Topic ID"
+msgstr "ID du sujet"
+
+#: class-gf-telegram.php:495
+msgid "Type"
+msgstr "Type"
+
+#: includes/class-github-updater.php:883
+msgid "Unable to rename the update folder. Please retry or update manually."
+msgstr "Impossible de renommer le dossier de mise à jour. Réessayez ou effectuez la mise à jour manuellement."
+
+#. translators: %s: A comma separated list of chat IDs and the reason each failed.
+#: class-gf-telegram.php:1717
+msgid "Unable to send the Telegram notification to: %s."
+msgstr "Impossible d’envoyer la notification Telegram à : %s."
+
+#: class-gf-telegram.php:1588
+msgid "Unable to send the notification: no recipient is configured."
+msgstr "Impossible d’envoyer la notification : aucun destinataire n’est configuré."
+
+#: class-gf-telegram.php:1580
+msgid "Unable to send the notification: the bot token is missing or invalid."
+msgstr "Impossible d’envoyer la notification : le jeton du bot est manquant ou invalide."
+
+#: class-gf-telegram.php:1596
+msgid "Unable to send the notification: the message is empty once merge tags are replaced."
+msgstr "Impossible d’envoyer la notification : le message est vide une fois les balises de fusion remplacées."
+
+#: class-gf-telegram.php:1635
+msgid "Unable to send the notification: the message is empty."
+msgstr "Impossible d’envoyer la notification : le message est vide."
+
+#: class-gf-telegram.php:905
+msgid "Uploaded files are sent as separate messages, after the notification itself."
+msgstr "Les fichiers envoyés sont transmis dans des messages distincts, après la notification elle-même."
+
+#: gravity-forms-telegram-notifications.php:151
+msgid "View details"
+msgstr "Voir les détails"
+
+#: class-gf-telegram.php:862
+msgid "When conditional logic is enabled, the notification is only sent when the condition is met. When disabled, every submission sends one."
+msgstr "Lorsque la logique conditionnelle est activée, la notification n’est envoyée que si la condition est remplie. Lorsqu’elle est désactivée, chaque soumission en déclenche une."
+
+#: class-gf-telegram.php:250
+msgid "Working…"
+msgstr "En cours…"
+
+#: class-gf-telegram.php:525
+msgid "You are not allowed to do that."
+msgstr "Vous n’avez pas l’autorisation d’effectuer cette action."
+
+#: gravity-forms-telegram-notifications.php:158
+msgid "🐛 Report a Bug"
+msgstr "🐛 Signaler un bug"
+
+#: gravity-forms-telegram-notifications.php:163
+msgid "🐛 Report a Bug (install Bug Reporter)"
+msgstr "🐛 Signaler un bug (installer Bug Reporter)"
