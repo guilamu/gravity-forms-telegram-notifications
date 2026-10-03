@@ -2,7 +2,7 @@
 # This file is distributed under the AGPL-3.0-or-later license.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gravity Forms Telegram Notifications 1.0.0\n"
+"Project-Id-Version: Gravity Forms Telegram Notifications 1.1.0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -436,8 +436,9 @@ msgstr ""
 msgid "Unable to send the notification: the message is empty."
 msgstr ""
 
-#: class-gf-telegram.php:905
-msgid "Uploaded files are sent as separate messages, after the notification itself."
+#. translators: %s: The {all_fields} merge tag.
+#: class-gf-telegram.php
+msgid "Uploaded files are sent as separate messages, after the notification itself. A field chosen here is left out of %s, since its file arrives on its own."
 msgstr ""
 
 #: gravity-forms-telegram-notifications.php:151
@@ -462,4 +463,13 @@ msgstr ""
 
 #: gravity-forms-telegram-notifications.php:163
 msgid "🐛 Report a Bug (install Bug Reporter)"
+msgstr ""
+
+#: class-gf-telegram.php
+msgid "This field is required."
+msgstr ""
+
+#. translators: 1: The unsupported tags found in the message. 2: The tags Telegram supports.
+#: class-gf-telegram.php
+msgid "Telegram does not support these HTML tags: %1$s. Use only: %2$s."
 msgstr ""

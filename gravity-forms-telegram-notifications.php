@@ -3,7 +3,7 @@
  * Plugin Name: Gravity Forms Telegram Notifications
  * Plugin URI: https://github.com/guilamu/gravity-forms-telegram-notifications
  * Description: Sends a Telegram message to a chat, group, channel or forum topic when a Gravity Form is submitted.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Guilamu
  * Author URI: https://github.com/guilamu
  * Update URI: https://github.com/guilamu/gravity-forms-telegram-notifications/
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'GF_TELEGRAM_VERSION', '1.0.0' );
+define( 'GF_TELEGRAM_VERSION', '1.1.0' );
 define( 'GF_TELEGRAM_PLUGIN_FILE', __FILE__ );
 define( 'GF_TELEGRAM_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GF_TELEGRAM_URL', plugin_dir_url( __FILE__ ) );

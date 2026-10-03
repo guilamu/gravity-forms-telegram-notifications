@@ -138,6 +138,41 @@ class GF_Telegram_Formatter {
 	}
 
 	/**
+	 * Returns the tags in a message template which Telegram does not accept.
+	 *
+	 * render() strips these before sending, so they never cause a failed send, but the admin's
+	 * formatting would silently disappear. Checking when the feed is saved surfaces the mistake
+	 * while it is still easy to fix. Only tag names are compared: comparing the template with its
+	 * wp_kses() version would also flag a bare ampersand, which is normalised rather than removed.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param string $template The message template from the feed.
+	 *
+	 * @return array The disallowed tag names, lowercased and without duplicates.
+	 */
+	public static function get_disallowed_tags( $template ) {
+
+		if ( ! preg_match_all( '#</?([a-z][a-z0-9-]*)[^>]*>#i', (string) $template, $matches ) ) {
+			return array();
+		}
+
+		$allowed    = array_keys( self::get_allowed_html() );
+		$disallowed = array();
+
+		foreach ( $matches[1] as $name ) {
+
+			$name = strtolower( $name );
+
+			if ( ! in_array( $name, $allowed, true ) ) {
+				$disallowed[] = $name;
+			}
+		}
+
+		return array_values( array_unique( $disallowed ) );
+	}
+
+	/**
 	 * Renders a message template for one submission.
 	 *
 	 * The template is split into literal text and merge tags. Each merge tag is resolved on its

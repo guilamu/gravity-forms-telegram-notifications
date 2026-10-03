@@ -161,6 +161,17 @@ class GFTelegram extends GFFeedAddOn {
 	protected $bot = array();
 
 	/**
+	 * File upload field IDs left out of {all_fields} while a feed message is rendered.
+	 *
+	 * Set only for the duration of get_message_text().
+	 *
+	 * @since 1.1.0
+	 *
+	 * @var int[]
+	 */
+	protected $attached_file_field_ids = array();
+
+	/**
 	 * Get an instance of this class.
 	 *
 	 * @since 1.0
@@ -722,6 +733,53 @@ class GFTelegram extends GFFeedAddOn {
 		}
 	}
 
+	/**
+	 * Validates the feed Message setting.
+	 *
+	 * With HTML formatting, a tag Telegram does not support is stripped at send time and the
+	 * formatting it carried is lost without a word. Refusing to save the feed tells the admin
+	 * while they are still looking at the template.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param array  $field         The field properties.
+	 * @param string $field_setting The field value.
+	 */
+	public function validate_message( $field, $field_setting ) {
+
+		// A validation callback replaces the framework's own checks, required included.
+		if ( rgblank( $field_setting ) ) {
+			$this->set_field_error( $field, esc_html__( 'This field is required.', 'gravity-forms-telegram-notifications' ) );
+
+			return;
+		}
+
+		$posted_mode = rgpost( '_gform_setting_parseMode' );
+		$parse_mode  = is_null( $posted_mode )
+			? GF_Telegram_Formatter::PARSE_MODE_HTML
+			: GF_Telegram_Formatter::sanitize_parse_mode( $posted_mode );
+
+		if ( GF_Telegram_Formatter::PARSE_MODE_HTML !== $parse_mode ) {
+			return;
+		}
+
+		$disallowed = GF_Telegram_Formatter::get_disallowed_tags( $field_setting );
+
+		if ( empty( $disallowed ) ) {
+			return;
+		}
+
+		$this->set_field_error(
+			$field,
+			sprintf(
+				/* translators: 1: The unsupported tags found in the message. 2: The tags Telegram supports. */
+				esc_html__( 'Telegram does not support these HTML tags: %1$s. Use only: %2$s.', 'gravity-forms-telegram-notifications' ),
+				esc_html( implode( ', ', $disallowed ) ),
+				esc_html( implode( ', ', array_keys( GF_Telegram_Formatter::get_allowed_html() ) ) )
+			)
+		);
+	}
+
 
 	// # FEED SETTINGS -------------------------------------------------------------------------------------------------
 
@@ -763,12 +821,13 @@ class GFTelegram extends GFFeedAddOn {
 						),
 					),
 					array(
-						'name'     => 'message',
-						'label'    => esc_html__( 'Message', 'gravity-forms-telegram-notifications' ),
-						'type'     => 'textarea',
-						'class'    => 'medium merge-tag-support mt-position-right',
-						'required' => true,
-						'tooltip'  => sprintf(
+						'name'                => 'message',
+						'label'               => esc_html__( 'Message', 'gravity-forms-telegram-notifications' ),
+						'type'                => 'textarea',
+						'class'               => 'medium merge-tag-support mt-position-right',
+						'required'            => true,
+						'validation_callback' => array( $this, 'validate_message' ),
+						'tooltip'             => sprintf(
 							'<h6>%s</h6>%s',
 							esc_html__( 'Message', 'gravity-forms-telegram-notifications' ),
 							sprintf(
@@ -902,7 +961,11 @@ class GFTelegram extends GFFeedAddOn {
 
 		return array(
 			'title'       => esc_html__( 'Attachments', 'gravity-forms-telegram-notifications' ),
-			'description' => esc_html__( 'Uploaded files are sent as separate messages, after the notification itself.', 'gravity-forms-telegram-notifications' ),
+			'description' => sprintf(
+				/* translators: %s: The {all_fields} merge tag. */
+				esc_html__( 'Uploaded files are sent as separate messages, after the notification itself. A field chosen here is left out of %s, since its file arrives on its own.', 'gravity-forms-telegram-notifications' ),
+				'{all_fields}'
+			),
 			'fields'      => array(
 				array(
 					'name'    => 'attachmentFields',
@@ -1243,12 +1306,74 @@ class GFTelegram extends GFFeedAddOn {
 	 */
 	public function get_message_text( $feed, $entry, $form ) {
 
-		return GF_Telegram_Formatter::render(
-			rgars( $feed, 'meta/message' ),
-			$form,
-			$entry,
-			$this->get_parse_mode( $feed )
-		);
+		$this->attached_file_field_ids = $this->get_attached_file_field_ids( $feed, $form );
+
+		add_filter( 'gform_merge_tag_filter', array( $this, 'omit_attached_file_from_all_fields' ), 10, 4 );
+
+		try {
+			return GF_Telegram_Formatter::render(
+				rgars( $feed, 'meta/message' ),
+				$form,
+				$entry,
+				$this->get_parse_mode( $feed )
+			);
+		} finally {
+			remove_filter( 'gform_merge_tag_filter', array( $this, 'omit_attached_file_from_all_fields' ), 10 );
+			$this->attached_file_field_ids = array();
+		}
+	}
+
+	/**
+	 * Returns the IDs of the file upload fields this feed attaches.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param array $feed The feed object.
+	 * @param array $form The form object.
+	 *
+	 * @return int[]
+	 */
+	public function get_attached_file_field_ids( $feed, $form ) {
+
+		$ids = array();
+
+		foreach ( $this->get_file_upload_fields( $form ) as $field ) {
+
+			if ( rgars( $feed, 'meta/attachField_' . $field->id ) ) {
+				$ids[] = (int) $field->id;
+			}
+		}
+
+		return $ids;
+	}
+
+	/**
+	 * Leaves an attached file field out of {all_fields}.
+	 *
+	 * The file follows the notification as its own photo or document, so its URL in the text
+	 * would only repeat it. A file field which is not attached still appears as a link, and an
+	 * explicit merge tag for the field is left alone.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param string|false $value     The value Gravity Forms would print for the field.
+	 * @param string       $merge_tag The merge tag being replaced.
+	 * @param string       $modifier  The merge tag modifiers. Unused.
+	 * @param GF_Field     $field     The field being rendered.
+	 *
+	 * @return string|false False when the field should be left out.
+	 */
+	public function omit_attached_file_from_all_fields( $value, $merge_tag, $modifier, $field ) {
+
+		if ( 'all_fields' !== $merge_tag || ! is_object( $field ) || 'fileupload' !== $field->type ) {
+			return $value;
+		}
+
+		if ( in_array( (int) $field->id, $this->attached_file_field_ids, true ) ) {
+			return false;
+		}
+
+		return $value;
 	}
 
 	/**

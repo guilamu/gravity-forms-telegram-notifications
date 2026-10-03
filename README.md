@@ -6,7 +6,8 @@ Sends a Telegram message to a chat, group, channel or forum topic when a Gravity
 
 ## Messaging
 
-- Write the message with Gravity Forms merge tags; `{all_fields}` expands the whole submission as plain text
+- Write the message with Gravity Forms merge tags; `{all_fields}` expands the whole submission as plain text, leaving out file fields already sent as attachments
+- With HTML formatting, a tag Telegram does not support is reported when the feed is saved rather than silently stripped
 - Choose HTML, MarkdownV2 or plain text formatting, with submitted values escaped automatically for the mode you pick
 - Split messages beyond Telegram's 4096 character limit across several sends, cut on line boundaries with open formatting tags closed and reopened
 - Add inline buttons written as `Label | URL`, with merge tags in both halves
@@ -116,6 +117,10 @@ add_filter( 'gform_telegram_api_base_url', function( $url ) {
 ```
 
 ## Changelog
+
+### 1.1.0 - 2026-10-03
+- **New:** With HTML formatting, the feed refuses to save a message containing tags Telegram does not support, and names them
+- **Improved:** A file field sent as an attachment is left out of `{all_fields}`, so its URL no longer repeats the file
 
 ### 1.0.0 - 2026-07-26
 - Initial release
